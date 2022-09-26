@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -9,6 +10,7 @@ public class Client : SingleTonMonobehaviour<Client>
 {
     //local IP
     public string serverIp = "127.0.0.1";
+    public Button strBtn, endBtn;
     Socket clientSocket = null;
 
     // Start is called before the first frame update
@@ -63,7 +65,7 @@ public class Client : SingleTonMonobehaviour<Client>
     // Update is called once per frame
     void Update()
     {
-        //마우스 왼쪽 클리할 때마다 패킷 클래스를 이용해서 위치정보를 서버에 전송.
+        //마우스 왼쪽 클릭할 때마다 패킷 클래스를 이용해서 위치정보를 서버에 전송.
         if (Input.GetMouseButtonDown(0) == true)
         {
             SimplePacket newPacket = new SimplePacket();
@@ -71,5 +73,6 @@ public class Client : SingleTonMonobehaviour<Client>
             newPacket.mouseY = Input.mousePosition.y;
             Client.Send(newPacket);
         }
+
     }
 }

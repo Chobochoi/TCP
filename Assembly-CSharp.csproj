@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Script\Server.cs" />
-    <Compile Include="Assets\02.Script\Client.cs" />
     <Compile Include="Assets\02.Script\SingleTonMonoBehaviour.cs" />
     <Compile Include="Assets\02.Script\SimplePacket.cs" />
     <Compile Include="Assets\02.Script\SceneMove.cs" />
+    <Compile Include="Assets\02.Script\Client.cs" />
+    <Compile Include="Assets\02.Script\Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
